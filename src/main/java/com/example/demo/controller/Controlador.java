@@ -19,20 +19,22 @@ public class Controlador {
 	@GetMapping("/")
 	public String index(){
 		return "index";
+		
 	}
 	@GetMapping("computadoras")
 	public String Computadora(Model modelo) {
 		List<Computadoras> compu=new ArrayList<Computadoras>(); 
-		compu.add(new Computadoras("S-10","Acer","Core i3", "windows 7","4 G", "2 nucleos"));
-		compu.add(new Computadoras("S-20","HP","Core i5", "windows vista","2 G", "6 nucleos"));
-		compu.add(new Computadoras("S-30","Toshiba","Core i9", "windows 10","6 G", "8 nucleos"));
-		compu.add(new Computadoras("S-40","ASUS","AMD Ryze", "windows XP","2 G", "1 nucleo"));
-		compu.add(new Computadoras("S-50","Lenovo","AMD ATHLON ", "Ubuntu","8 G", "8 nucleos"));
-		compu.add(new Computadoras("S-60","Sony","pentium", "Centos","16 G", " 4 nucleos"));
-		compu.add(new Computadoras("S-70","MAC","Core i7", "IOS","8 G", "8 nucleos"));
-		compu.add(new Computadoras("S-80","Dell","Core i", "Windows 8","4 G", "2 nucleos"));
-		compu.add(new Computadoras("S-90","Samsung","Core i6", "windows 7","2 G", "4 nucleos"));
-		compu.add(new Computadoras("S-100","Acer","AMD", "windows XP","4 G", "1 nucleo"));
+		
+		compu.add(new Computadoras("S-10","Acer","Core i3", "windows 7","4 G", "2 núcleos"));
+		compu.add(new Computadoras("S-20","HP","Core i5", "windows vista","2 G", "6 núcleos"));
+		compu.add(new Computadoras("S-30","Toshiba","Core i9", "windows 10","6 G", "8 núcleos"));
+		compu.add(new Computadoras("S-40","ASUS","AMD Ryze", "windows XP","2 G", "1 núcleo"));
+		compu.add(new Computadoras("S-50","Lenovo","AMD ATHLON ", "Ubuntu","8 G", "8 núcleos"));
+		compu.add(new Computadoras("S-60","Sony","pentium", "Centos","16 G", " 4 núcleos"));
+		compu.add(new Computadoras("S-70","MAC","Core i7", "IOS","8 G", "8 núcleos"));
+		compu.add(new Computadoras("S-80","Dell","Core i", "Windows 8","4 G", "2 núcleos"));
+		compu.add(new Computadoras("S-90","Samsung","Core i6", "windows 7","2 G", "4 núcleos"));
+		compu.add(new Computadoras("S-100","Acer","AMD", "windows XP","4 G", "1 núcleo"));
 		
 		modelo.addAttribute("compu",compu);
 		return "computadoras";
